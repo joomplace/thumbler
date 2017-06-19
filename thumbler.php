@@ -1,18 +1,18 @@
 <?php
 /**
- * @package     Joomla.Plugin
+ * @package     JoomPlace.Plugin
  * @subpackage  System.sef
  *
- * @copyright   Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2017 Joomplace. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('_JEXEC') or die;
 
 /**
- * Joomla! SEF Plugin.
+ * Joomla! Thumbler Plugin.
  *
- * @since  1.5
+ * @since  3.5
  */
 class PlgSystemThumbler extends JPlugin
 {

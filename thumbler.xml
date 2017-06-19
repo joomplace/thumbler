@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.5" type="plugin" group="system" method="upgrade">
+	<name>plg_system_thumbler</name>
+	<author>JoomPlace Team</author>
+	<creationDate>May 2017</creationDate>
+	<copyright>Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>support@joomplace.com</authorEmail>
+	<authorUrl>www.joomplace.com</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_THUMBLER_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="thumbler">thumbler.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_system_thumbler.ini</language>
+		<language tag="en-GB">en-GB.plg_system_thumbler.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+						name="quality"
+						type="integer"
+						default="100"
+						first="30"
+						last="100"
+						step="5"
+				/>
+				<field
+						type="text"
+						name="width"
+						default="100"
+						filter="integer"
+				/>
+				<field
+						type="text"
+						name="height"
+						filter="integer"
+				/>
+				<field
+						type="radio"
+						name="square"
+						default="0"
+						class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+						type="list"
+						name="sizing"
+						default="filled"
+				>
+					<option value="filled">JFILLED</option>
+					<option value="spaced">JSPACED</option>
+					<option value="full">JFULL</option>
+					<option value="no">JNONE</option>
+				</field>
+				<field
+						type="text"
+						name="directory"
+						default="cache/images"
+						filter="PATH"
+				/>
+				<field
+						type="radio"
+						name="sub"
+						default="1"
+						class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+						type="text"
+						name="subdirectory"
+						default="thumbs"
+						filter="PATH"
+				/>
+				<field
+						type="radio"
+						name="type_sub"
+						default="1"
+						class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+						type="media"
+						name="noimage"
+						default=""
+				/>
+				<field
+						type="media"
+						name="watermark"
+						default=""
+				/>
+				<field
+						name="watermark_sizing"
+						type="integer"
+						default="60"
+						first="10"
+						last="100"
+						step="5"
+				/>
+				<field
+						name="background"
+						type="color"
+						default="#fff"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

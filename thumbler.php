@@ -23,7 +23,7 @@ class PlgSystemThumbler extends JPlugin
 	 *
 	 * @since   1.0
 	 */
-	public function onAfterDispatch()
+	public function onAfterInitialise()
 	{
 		jimport('plugins.system.thumbler.Processor',JPATH_SITE);
         \joomplace\plugins\system\thumbler\Processor::$params = $this->params->toString();

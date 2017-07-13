@@ -11,6 +11,8 @@
 	<description>PLG_THUMBLER_XML_DESCRIPTION</description>
 	<files>
 		<filename plugin="thumbler">thumbler.php</filename>
+		<filename>Processor.php</filename>
+		<folder>sql</folder>
 	</files>
 	<install>
 		<sql>

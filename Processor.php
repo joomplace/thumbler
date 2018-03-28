@@ -79,7 +79,7 @@ class Processor
      *	'compression' => quality 0..100 for .jpeg
      *
      */
-    static function getThumb($image, $settings = array(), $watermark = true, $purge_cache = false){
+    static function getThumb($image, $prefix='', $settings = array(), $watermark = true, $purge_cache = false){
         $params = new \Joomla\Registry\Registry(self::$params);
         $settings = new \Joomla\Registry\Registry($settings);
         $params->merge($settings);
@@ -116,6 +116,8 @@ class Processor
         if(!$image_name){
             return null;
         }
+        $image_name = $prefix.$image_name;
+        
         if(is_file($thumb_path.$image_name) && !$purge_cache){
             return trim($thumb_rel_url.$image_name,'\\');
         }else{
